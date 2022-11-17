@@ -18,16 +18,15 @@ public class Prodotto {
 	public Prodotto(int prezzo, String nome, String descrizione) {
 		this.codice = setCodice();
 		this.prezzo = prezzo;
-		this.iva = 20;
+		iva = 20;
 		this.nome = nome;
 		this.descrizione = descrizione;
 	}
 	
 	
 	public int setCodice() {
-		Random rnd = new Random(10000);
-		int rndCodice = rnd.nextInt((100000) - 10000);
-		
+		Random rnd = new Random();
+		int rndCodice = rnd.nextInt(10000, 100000);
 		return rndCodice;
 	}
 	
